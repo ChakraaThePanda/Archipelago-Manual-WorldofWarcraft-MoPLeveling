@@ -1,0 +1,13 @@
+{
+  "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.game.schema.json",
+  "game": "WorldofWarcraftMoPLeveling",
+  "creator": "Chakraa",
+  "filler_item_name": "Did somebody say [Thunderfury, Blessed Blade of the Windseeker]?!",
+  "starting_items": [
+    {
+      "item_categories": ["Class"],
+	  "yaml_option": ["randomize_starting_class"],
+      "random": 1
+    }
+  ]
+}

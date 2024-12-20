@@ -1,0 +1,28 @@
+{
+  "Randomize Starting Class": {
+    "yaml_option": [
+      "randomize_starting_class"
+    ],
+    "hidden": true
+  },
+  "Talents": {
+    "yaml_option": [
+      "find_your_talent_slots"
+    ]
+  },
+  "Zones": {
+    "hidden": true
+  },
+  "Alliance": {
+    "yaml_option": [
+      "alliance"
+    ],
+    "hidden": true
+  },
+  "Horde": {
+    "yaml_option": [
+      "horde"
+    ],
+    "hidden": true
+  }
+}

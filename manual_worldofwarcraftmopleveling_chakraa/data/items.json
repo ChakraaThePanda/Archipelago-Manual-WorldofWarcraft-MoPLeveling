@@ -1,0 +1,758 @@
+[
+  {
+    "count": 1,
+    "name": "Maximum Level 20",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 30",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 40",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 50",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 60",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 70",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 80",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 85",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Maximum Level 90",
+    "category": [
+      "Maximum Levels"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Ghostlands (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Westfall (10-15)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Alliance"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Bloodmyst Isle (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Alliance"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Darkshore (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Alliance"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Loch Modan (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Alliance"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Azshara (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Northern Barrens (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Silverpine Forest (10-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Redridge Mountains (15-20)",
+    "category": [
+      "Zones",
+      "Zones 10-20",
+      "Alliance"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Ashenvale (20-25)",
+    "category": [
+      "Zones",
+      "Zones 20-30"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Hillsbrad Foothills (20-25)",
+    "category": [
+      "Zones",
+      "Zones 20-30",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Duskwood (20-25)",
+    "category": [
+      "Zones",
+      "Zones 20-30",
+      "Alliance"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Wetlands (20-25)",
+    "category": [
+      "Zones",
+      "Zones 20-30",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Arathi Highlands (25-30)",
+    "category": [
+      "Zones",
+      "Zones 20-30"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Northern Stranglethorn (25-30)",
+    "category": [
+      "Zones",
+      "Zones 20-30"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Stonetalon Mountain (25-30)",
+    "category": [
+      "Zones",
+      "Zones 20-30",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Desolace (30-35)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Southern Barrens (30-35)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "The Cape of Stranglethorn (30-35)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "The Hinterlands (30-35)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Dustwallow Marsh (35-40)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Feralas (35-40)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Western Plaguelands (35-40)",
+    "category": [
+      "Zones",
+      "Zones 30-40"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Eastern Plaguelands (40-45)",
+    "category": [
+      "Zones",
+      "Zones 40-50"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Thousand Needles (40-45)",
+    "category": [
+      "Zones",
+      "Zones 40-50",
+      "Horde"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Badlands (44-48)",
+    "category": [
+      "Zones",
+      "Zones 40-50"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Felwood (45-50)",
+    "category": [
+      "Zones",
+      "Zones 40-50"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Tanaris (45-50)",
+    "category": [
+      "Zones",
+      "Zones 40-50"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Searing Gorge (47-51)",
+    "category": [
+      "Zones",
+      "Zones 40-50"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Burning Steppes (49-52)",
+    "category": [
+      "Zones",
+      "Zones 50-60"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Un'Goro Crater (50-55)",
+    "category": [
+      "Zones",
+      "Zones 50-60"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Winterspring (50-55)",
+    "category": [
+      "Zones",
+      "Zones 50-60"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Swamp of Sorrows (52-54)",
+    "category": [
+      "Zones",
+      "Zones 50-60"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Blasted Lands (54-60)",
+    "category": [
+      "Zones",
+      "Zones 50-60"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Silithus (55-60)",
+    "category": [
+      "Zones",
+      "Zones 50-60"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Hellfire Peninsula (58-63)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Zangarmarsh (60-64)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Terokkar Forest (62-65)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Nagrand (64-67)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Blade's Edge Mountains (65-68)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Shadowmoon Valley (67-70)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Netherstorm (67-70)",
+    "category": [
+      "Zones",
+      "Zones 60-70"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Borean Tundra (68-72)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Howling Fjord (68-72)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Dragonblight (71-75)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Grizzly Hills (73-75)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Zul'Drak (74-76)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Sholazar Basin (76-78)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Crystalsong Forest (77-80)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Icecrown (77-80)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "The Storm Peaks (77-80)",
+    "category": [
+      "Zones",
+      "Zones 70-80"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Mount Hyjal (80-82)",
+    "category": [
+      "Zones",
+      "Zones 80-85"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Vashj'ir (80-82)",
+    "category": [
+      "Zones",
+      "Zones 80-85"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Deepholm (82-83)",
+    "category": [
+      "Zones",
+      "Zones 80-85"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Uldum (83-84)",
+    "category": [
+      "Zones",
+      "Zones 80-85"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Twilight Highlands (84-85)",
+    "category": [
+      "Zones",
+      "Zones 80-85"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "The Jade Forest (85-86)",
+    "category": [
+      "Zones",
+      "Zones 85-90"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Krasarang Wilds (86-87)",
+    "category": [
+      "Zones",
+      "Zones 85-90"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Valley of the Four Winds (86-87)",
+    "category": [
+      "Zones",
+      "Zones 85-90"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Kun-Lai Summit (87-88)",
+    "category": [
+      "Zones",
+      "Zones 85-90"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Townlong Steppes (88-89)",
+    "category": [
+      "Zones",
+      "Zones 85-90"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Dread Wastes (89-90)",
+    "category": [
+      "Zones",
+      "Zones 85-90"
+    ],
+    "progression": true
+  },
+  {
+    "count": 1,
+    "name": "Talent Row Level 15",
+    "category": [
+      "Talents"
+    ],
+    "useful": true
+  },
+  {
+    "count": 1,
+    "name": "Talent Row Level 30",
+    "category": [
+      "Talents"
+    ],
+    "useful": true
+  },
+  {
+    "count": 1,
+    "name": "Talent Row Level 45",
+    "category": [
+      "Talents"
+    ],
+    "useful": true
+  },
+  {
+    "count": 1,
+    "name": "Talent Row Level 60",
+    "category": [
+      "Talents"
+    ],
+    "useful": true
+  },
+  {
+    "count": 1,
+    "name": "Talent Row Level 75",
+    "category": [
+      "Talents"
+    ],
+    "useful": true
+  },
+  {
+    "count": 1,
+    "name": "Warrior",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Paladin",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Hunter",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Rogue",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Priest",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Shaman",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Mage",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Warlock",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Monk",
+    "category": [
+      "Class"
+    ],
+    "filler": true
+  }
+]

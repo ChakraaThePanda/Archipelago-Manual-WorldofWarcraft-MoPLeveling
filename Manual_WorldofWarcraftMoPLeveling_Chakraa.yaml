@@ -1,0 +1,10 @@
+Manual_WorldofWarcraftMoPLeveling_Chakraa:
+    progression_balancing: 50
+    accessibility: items
+    randomize_starting_class: true
+    find_your_talent_slots: true
+    alliance: true
+    horde: true
+
+game: Manual_WorldofWarcraftMoPLeveling_Chakraa
+name: Player{number}
