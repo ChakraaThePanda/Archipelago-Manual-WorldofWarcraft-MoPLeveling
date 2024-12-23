@@ -1,5 +1,13 @@
 [
   {
+    "name": "Level 1",
+    "category": [
+      "Levels 1-10"
+    ],
+    "requires": [],
+    "region": "Levels 1-10"
+  },
+  {
     "name": "Level 2",
     "category": [
       "Levels 1-10"
