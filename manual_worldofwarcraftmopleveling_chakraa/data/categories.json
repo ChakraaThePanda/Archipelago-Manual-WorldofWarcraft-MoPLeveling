@@ -13,16 +13,16 @@
   "Zones": {
     "hidden": true
   },
-  "Alliance": {
-    "yaml_option": [
-      "alliance"
-    ],
+  "Sequential Levels": {
+    "hidden": true
+  },
+  "Progressive Levels": {
     "hidden": true
   },
   "Horde": {
-    "yaml_option": [
-      "horde"
-    ],
+    "hidden": true
+  },
+  "Alliance": {
     "hidden": true
   }
 }

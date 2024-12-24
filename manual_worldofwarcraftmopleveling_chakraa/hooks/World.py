@@ -5,6 +5,7 @@ from BaseClasses import MultiWorld, CollectionState
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import ManualItem
 from ..Locations import ManualLocation
+from .Options import LevelItems, Faction
 
 # Raw JSON data from the Manual apworld, respectively:
 #          data/game.json, data/items.json, data/locations.json, data/regions.json
@@ -63,29 +64,35 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
     # Use this hook to remove items from the item pool
     itemNamesToRemove = [] # List of item names
-
-    # Add your code here to calculate which items to remove.
-    #
-    # Because multiple copies of an item can exist, you need to add an item name
-    # to the list multiple times if you want to remove multiple copies of it.
+    level_items = get_option_value(multiworld,player,"level_items") # Define if we want Prog Levels or Sequential
+    faction_items = get_option_value(multiworld,player,"faction") # Define if we play Alliance or Horde
+    
 
     for item_check in list(item_pool): # create a copy of the item_pool to iterate through
         item_table_element = next(i_t for i_t in item_table if i_t['name'] == item_check.name)
         item_categories = item_table_element.get("category", []) # get the categories for each item
         if "Class" in item_categories: # check if the item is one of your clans
             item_pool.remove(item_check) # if so, remove it from the pool
+        if level_items == LevelItems.option_sequential and "Progressive Levels" in item_categories: # Remove all progression items if we are using Sequential
+                item_pool.remove(item_check)
+        if level_items == LevelItems.option_progressive and "Sequential Levels" in item_categories: # Remove all sequential items if we are using Progressive
+                item_pool.remove(item_check)
+        if faction_items == Faction.option_alliance:
+            if "Horde" in item_categories: # Remove all Horde zones and items if we are using Alliance
+                    item_pool.remove(item_check)
+            if item_check.name == "Alliance": # Check if the item is called "Alliance" for the faction
+                    multiworld.push_precollected(item_check) # If so, send it as a Starting Item
+                    item_pool.remove(item_check) # And remove it from the pool
+        if faction_items == Faction.option_horde:
+            if "Alliance" in item_categories: # Remove all Alliance zones and items if we are using Alliance
+                    item_pool.remove(item_check)
+            if item_check.name == "Horde":
+                    multiworld.push_precollected(item_check)
+                    item_pool.remove(item_check)
             
     item_pool = world.add_filler_items(item_pool, [])
     
     return item_pool # give the modified pool back to the multiworld
-
-    # Some other useful hook options:
-
-    ## Place an item at a specific location
-    # location = next(l for l in multiworld.get_unfilled_locations(player=player) if l.name == "Location Name")
-    # item_to_place = next(i for i in item_pool if i.name == "Item Name")
-    # location.place_locked_item(item_to_place)
-    # item_pool.remove(item_to_place)
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
 def after_create_items(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:

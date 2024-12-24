@@ -26,16 +26,25 @@ from ..Helpers import is_option_enabled, get_option_value
 # To add an option, use the before_options_defined hook below and something like this:
 #   options["total_characters_to_win_with"] = TotalCharactersToWinWith
 #
-class TotalCharactersToWinWith(Range):
-    """Instead of having to beat the game with all characters, you can limit locations to a subset of character victory locations."""
-    display_name = "Number of characters to beat the game with before victory"
-    range_start = 10
-    range_end = 50
-    default = 50
+class Faction(Choice):
+    """Choose your character faction (affects which zones are available for you to quest in)"""
+    display_name = "Choose your character faction (affects which zones are available for you to quest in)"
+    option_alliance = 0
+    option_horde = 1
+    default = "random"
+    
+class LevelItems(Choice):
+    """Progressive will add multiple Progressive Levels to the pool and replace the normal Maximum Level X items."""
+    display_name = "Progressive will add multiple Progressive Levels to the pool and replace the normal Maximum Level X items."
+    option_sequential = 0
+    option_progressive = 1
+    default = 0
 
 
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict) -> dict:
+    options["faction"] = Faction
+    options["level_items"] = LevelItems
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options

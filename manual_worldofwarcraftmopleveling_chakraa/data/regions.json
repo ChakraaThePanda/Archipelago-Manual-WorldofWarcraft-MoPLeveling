@@ -10,52 +10,52 @@
     "connects_to": [
       "Levels 21-30"
     ],
-    "requires": "|Maximum Level 20| AND |@Zones 10-20:2|"
+    "requires": "(|Maximum Level 20| OR |Progressive Levels:1|) AND |@Zones 10-20:2|"
   },
   "Levels 21-30": {
     "connects_to": [
       "Levels 31-40"
     ],
-    "requires": "|Maximum Level 30| AND |@Zones 20-30:2|"
+    "requires": "(|Maximum Level 30| OR |Progressive Levels:2|) AND |@Zones 20-30:2|"
   },
   "Levels 31-40": {
     "connects_to": [
       "Levels 41-50"
     ],
-    "requires": "|Maximum Level 40| AND |@Zones 30-40:2|"
+    "requires": "(|Maximum Level 40| OR |Progressive Levels:3|) AND |@Zones 30-40:2|"
   },
   "Levels 41-50": {
     "connects_to": [
       "Levels 51-60"
     ],
-    "requires": "|Maximum Level 50| AND |@Zones 40-50:2|"
+    "requires": "(|Maximum Level 50| OR |Progressive Levels:4|) AND |@Zones 40-50:2|"
   },
   "Levels 51-60": {
     "connects_to": [
       "Levels 61-70"
     ],
-    "requires": "|Maximum Level 60| AND |@Zones 50-60:2|"
+    "requires": "(|Maximum Level 60| OR |Progressive Levels:5|) AND |@Zones 50-60:2|"
   },
   "Levels 61-70": {
     "connects_to": [
       "Levels 71-80"
     ],
-    "requires": "|Maximum Level 70| AND |@Zones 60-70:2|"
+    "requires": "(|Maximum Level 70| OR |Progressive Levels:6|) AND |@Zones 60-70:2|"
   },
   "Levels 71-80": {
     "connects_to": [
       "Levels 81-85"
     ],
-    "requires": "|Maximum Level 80| AND |@Zones 70-80:2|"
+    "requires": "(|Maximum Level 80| OR |Progressive Levels:7|) AND |@Zones 70-80:2|"
   },
   "Levels 81-85": {
     "connects_to": [
       "Levels 86-90"
     ],
-    "requires": "|Maximum Level 85| AND |@Zones 80-85:2|"
+    "requires": "(|Maximum Level 85| OR |Progressive Levels:8|) AND |@Zones 80-85:2|"
   },
   "Levels 86-90": {
     "connects_to": [],
-    "requires": "|Maximum Level 90| AND |@Zones 85-90:2|"
+    "requires": "(|Maximum Level 90| OR |Progressive Levels:9|) AND |@Zones 85-90:2|"
   }
 }

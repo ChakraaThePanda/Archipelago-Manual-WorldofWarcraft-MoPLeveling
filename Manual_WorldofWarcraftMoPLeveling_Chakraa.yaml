@@ -3,8 +3,13 @@ Manual_WorldofWarcraftMoPLeveling_Chakraa:
     accessibility: items
     randomize_starting_class: true
     find_your_talent_slots: true
-    alliance: true
-    horde: true
+    faction:
+      alliance: 0
+      horde: 0
+      random: 50
+    level_items:
+      sequential: 50
+      progressive: 0
 
 game: Manual_WorldofWarcraftMoPLeveling_Chakraa
 name: Player{number}
