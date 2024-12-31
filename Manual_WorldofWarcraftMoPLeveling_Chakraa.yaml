@@ -3,6 +3,9 @@ Manual_WorldofWarcraftMoPLeveling_Chakraa:
     accessibility: items
     randomize_starting_class: true
     find_your_talent_slots: true
+    include_dungeons: true
+    include_equipment_rarity: true
+    hardcore_mode: true
     faction:
       alliance: 0
       horde: 0

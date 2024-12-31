@@ -5,8 +5,12 @@
   "filler_item_name": "Did someone say [Thunderfury, Blessed Blade of the Windseeker]?!",
   "starting_items": [
     {
-      "item_categories": ["Class"],
-	  "yaml_option": ["randomize_starting_class"],
+      "item_categories": [
+        "Class"
+      ],
+      "yaml_option": [
+        "randomize_starting_class"
+      ],
       "random": 1
     }
   ]

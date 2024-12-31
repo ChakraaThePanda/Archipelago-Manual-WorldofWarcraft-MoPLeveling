@@ -28,7 +28,7 @@ from ..Helpers import is_option_enabled, get_option_value
 #
 class Faction(Choice):
     """Choose your character faction. (affects which zones are available for you to quest in)"""
-    display_name = "Choose your character faction. (affects which zones are available for you to quest in)"
+    display_name = """Choose your character faction. (affects which zones are available for you to quest in)"""
     option_alliance = 0
     option_horde = 1
     default = "random"
@@ -51,5 +51,8 @@ def before_options_defined(options: dict) -> dict:
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options
 def after_options_defined(options: dict) -> dict:
     options["randomize_starting_class"].__doc__ = """If set to 'true', you will be given a random class for you to play. You can see the received class in the Manual client."""
-    options["find_your_talent_slots"].__doc__ = """If set to 'true', this will add "Talent Row Level X" items to the pool. This adds a bit of difficulty as you won't use Talents until you find the correct item for each row."""
+    options["include_dungeons"].__doc__ = """If set to 'true', this will add all the various leveling dungeons as Filler items. This has no effect on logic; only Maximum Level and Zone Items do."""
+    options["include_talent_slots"].__doc__ = """If set to 'true', this will add "Talent Row Level X" items to the pool. This adds a bit of difficulty as you won't use Talents until you find the correct item for each row."""
+    options["include_equipment_rarity"].__doc__ = """If set to 'true', this will add "Progressive Equipement" items to the pool. You start as only being able to wear Gray & White items and finding a "Progressive Equipement" will then unlock Greens, then Blues and then Purples."""
+    options["hardcore_mode"].__doc__ = """If set to 'true', this will add 3 "Ankh of Reincarnation" items into the pool. On Hardcore, if you die, you have to restart your character, unless you have an unused "Ankh of Reincarnation"."""
     return options

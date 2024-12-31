@@ -7,7 +7,23 @@
   },
   "Talents": {
     "yaml_option": [
-      "find_your_talent_slots"
+      "include_talent_slots"
+    ]
+  },
+  "Dungeons": {
+    "yaml_option": [
+      "include_dungeons"
+    ],
+    "hidden": true
+  },
+  "Equipment": {
+    "yaml_option": [
+      "include_equipment_rarity"
+    ]
+  },
+  "Hardcore": {
+    "yaml_option": [
+      "hardcore_mode"
     ]
   },
   "Zones": {

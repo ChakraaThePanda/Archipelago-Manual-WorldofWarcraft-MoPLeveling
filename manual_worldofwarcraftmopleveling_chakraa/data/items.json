@@ -4,7 +4,7 @@
     "name": "Maximum Level 20",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -13,7 +13,7 @@
     "name": "Maximum Level 30",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -22,7 +22,7 @@
     "name": "Maximum Level 40",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -31,7 +31,7 @@
     "name": "Maximum Level 50",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -40,7 +40,7 @@
     "name": "Maximum Level 60",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -49,7 +49,7 @@
     "name": "Maximum Level 70",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -58,7 +58,7 @@
     "name": "Maximum Level 80",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -67,7 +67,7 @@
     "name": "Maximum Level 85",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -76,7 +76,7 @@
     "name": "Maximum Level 90",
     "category": [
       "Maximum Levels",
-	  "Sequential Levels"
+      "Sequential Levels"
     ],
     "progression": true
   },
@@ -85,7 +85,7 @@
     "name": "Progressive Levels",
     "category": [
       "Maximum Levels",
-	  "Progressive Levels"
+      "Progressive Levels"
     ],
     "progression": true
   },
@@ -241,8 +241,7 @@
     "name": "Stonetalon Mountain (25-30)",
     "category": [
       "Zones",
-      "Zones 20-30",
-      "Horde"
+      "Zones 20-30"
     ],
     "progression": true
   },
@@ -778,7 +777,7 @@
     "name": "Alliance",
     "category": [
       "Faction",
-	  "Alliance"
+      "Alliance"
     ],
     "filler": true
   },
@@ -787,8 +786,555 @@
     "name": "Horde",
     "category": [
       "Faction",
-	  "Horde"
+      "Horde"
     ],
     "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Ragefire Chasm (15-21)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Deadmines (15-21)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Wailing Caverns (15-25)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Shadowfang Keep (16-26)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Blackfathom Deeps (20-30)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Stormwind Stockade (20-30)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Gnomeregan (24-34)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Scarlet Halls (26-36)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Scarlet Monastery (28-38)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Razorfen Kraul (30-40)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Maraudon - The Wicked Grotto (30-40)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Maraudon - Foulspore Cavern (32-42)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Maraudon - Earth Song Falls (34-44)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Uldaman (35-45)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Dire Maul - Warpwood Quarter (36-46)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Scholomance (38-48)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Dire Maul - Capital Gardens (39-49)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Razorfen Downs (40-50)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Dire Maul - Gordok Commons (42-52)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Stratholme - Main Gate (42-52)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Zul'Farrak (44-54)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Stratholme - Service Entrance (46-56)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Blackrock Depths - Detention Block (47-57)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Sunken Temple (50-60)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Blackrock Depths - Upper City (51-61)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Lower Blackrock Spire (55-65)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Upper Blackrock Spire (55-65)",
+    "category": [
+      "Dungeons",
+      "Dungeons 15-60"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Hellfire Ramparts (58-67)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Blood Furnace (59-68)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Slave Pens (60-69)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Underbog (61-70)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Mana-Tombs (62-71)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Auchenai Crypts (63-72)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Escape from Durnholde (64-73)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Sethekk Halls (65-73)",
+    "category": [
+      "Dungeons",
+      "Dungeons 60-70"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Utgarde Keep (68-78)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Nexus (69-79)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Azjol-Nerub (70-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Ahn'kahet: The Old Kingdom (71-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Drak'Tharon Keep (72-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Violet Hold (73-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Gundrak (74-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Halls of Stone (75-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Halls of Lightning (77-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Oculus (77-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Utgarde Pinnacle (77-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Culling of Stratholme (78-80)",
+    "category": [
+      "Dungeons",
+      "Dungeons 70-80"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Blackrock Caverns (80-85)",
+    "category": [
+      "Dungeons",
+      "Dungeons 80-85"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Throne of the Tides (80-85)",
+    "category": [
+      "Dungeons",
+      "Dungeons 80-85"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Stonecore (81-85)",
+    "category": [
+      "Dungeons",
+      "Dungeons 80-85"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "The Vortex Pinnacle (81-85)",
+    "category": [
+      "Dungeons",
+      "Dungeons 80-85"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Grim Batol (84-85)",
+    "category": [
+      "Dungeons",
+      "Dungeons 80-85"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Lost City of the Tol'vir (84-85)",
+    "category": [
+      "Dungeons",
+      "Dungeons 80-85"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Stormstout Brewery (85-90)",
+    "category": [
+      "Dungeons",
+      "Dungeons 85-90"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Temple of the Jade Serpent (85-90)",
+    "category": [
+      "Dungeons",
+      "Dungeons 85-90"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Shado-Pan Monastery (87-90)",
+    "category": [
+      "Dungeons",
+      "Dungeons 85-90"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Mogu'shan Palace (87-90)",
+    "category": [
+      "Dungeons",
+      "Dungeons 85-90"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Siege of Niuzao Temple (88-90)",
+    "category": [
+      "Dungeons",
+      "Dungeons 85-90"
+    ],
+    "filler": true
+  },
+  {
+    "count": 1,
+    "name": "Gate of the Setting Sun (88-90)",
+    "category": [
+      "Dungeons",
+      "Dungeons 85-90"
+    ],
+    "filler": true
+  },
+  {
+    "count": "3",
+    "name": "Ankh of Reincarnation",
+    "category": [
+      "Hardcore"
+    ],
+    "useful": true
+  },
+  {
+    "count": "3",
+    "name": "Progressive Equipment",
+    "category": [
+      "Equipment"
+    ],
+    "useful": true
   }
 ]
