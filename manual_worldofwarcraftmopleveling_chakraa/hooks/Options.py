@@ -28,28 +28,33 @@ from ..Helpers import is_option_enabled, get_option_value
 #
 class Faction(Choice):
     """Choose your character faction. (affects which zones are available for you to quest in)"""
-    display_name = """Choose your character faction. (affects which zones are available for you to quest in)"""
+    display_name = """Character faction"""
     option_alliance = 0
     option_horde = 1
     default = "random"
     
 class LevelItems(Choice):
     """Progressive will add multiple Progressive Levels to the pool and replace the normal "Maximum Level X" items."""
-    display_name = """Progressive will add multiple Progressive Levels to the pool and replace the normal "Maximum Level X" items."""
+    display_name = """Progressive or Sequential"""
     option_sequential = 0
     option_progressive = 1
     default = 0
-
 
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict) -> dict:
     options["faction"] = Faction
     options["level_items"] = LevelItems
-    
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options
 def after_options_defined(options: dict) -> dict:
+    options["goal"].__doc__ =     """This will affect the items/locations in the randomizer to match what max level you want to reach.
+    vanilla = Level 60
+    the_burning_crusade = Level 70
+    wrath_of_the_lich_king = Level 80
+    cataclysm = Level 85
+    mists_of_pandaria = Level 90"""    
+    options["goal"].default = 4
     options["randomize_starting_class"].__doc__ = """If set to 'true', you will be given a random class for you to play. You can see the received class in the Manual client."""
     options["include_dungeons"].__doc__ = """If set to 'true', this will add all the various leveling dungeons as Filler items. This has no effect on logic; only Maximum Level and Zone Items do."""
     options["include_talent_slots"].__doc__ = """If set to 'true', this will add "Talent Row Level X" items to the pool. This adds a bit of difficulty as you won't use Talents until you find the correct item for each row."""

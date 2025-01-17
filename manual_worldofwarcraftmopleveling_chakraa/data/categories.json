@@ -40,5 +40,20 @@
   },
   "Alliance": {
     "hidden": true
+  },
+  "Vanilla": {
+    "hidden": true
+  },
+  "The Burning Crusade": {
+    "hidden": true
+  },
+  "Wrath of the Lich King": {
+    "hidden": true
+  },
+  "Cataclysm": {
+    "hidden": true
+  },
+  "Mists of Pandaria": {
+    "hidden": true
   }
 }

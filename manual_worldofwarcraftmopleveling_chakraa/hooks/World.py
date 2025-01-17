@@ -16,7 +16,7 @@ from ..Data import game_table, item_table, location_table, region_table
 from ..Helpers import is_option_enabled, get_option_value
 
 # calling logging.info("message") anywhere below in this file will output the message to both console and log file
-import logging
+import logging, re
 
 ########################################################################################
 ## Order of method calls when the world generates:
@@ -43,16 +43,43 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
-    # Use this hook to remove locations from the world
-    locationNamesToRemove = [] # List of location names
+    expansion = get_option_value(multiworld, player, "goal")
 
-    # Add your code here to calculate which locations to remove
+    # Map numeric values to expansion names and max levels
+    expansion_map = {
+        0: ("Vanilla", 60),
+        1: ("The Burning Crusade", 70),
+        2: ("Wrath of the Lich King", 80),
+        3: ("Cataclysm", 85),
+        4: ("Mists of Pandaria", 90),
+    }
 
+    if expansion not in expansion_map:
+        raise ValueError(f"Invalid expansion value '{expansion}'.")
+
+    _, max_level = expansion_map[expansion]  # Only unpack max_level since expansion_name is unused
+
+    locations_to_remove = []
+
+    for location_data in location_table:  # Iterate through all locations
+        location_name = location_data["name"]
+
+        # Extract level from location name
+        level_match = re.search(r"Level (\d+)", location_name)
+        if level_match:
+            level = int(level_match.group(1))
+            if level > max_level:
+                locations_to_remove.append(location_name)
+
+    # Remove locations from regions
     for region in multiworld.regions:
         if region.player == player:
-            for location in list(region.locations):
-                if location.name in locationNamesToRemove:
-                    region.locations.remove(location)
+            region.locations = [
+                location for location in region.locations
+                if location.name not in locations_to_remove
+            ]
+
+    # Clear location cache if applicable
     if hasattr(multiworld, "clear_location_cache"):
         multiworld.clear_location_cache()
 
@@ -62,37 +89,79 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 
 # The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
-    # Use this hook to remove items from the item pool
-    itemNamesToRemove = [] # List of item names
-    level_items = get_option_value(multiworld,player,"level_items") # Define if we want Prog Levels or Sequential
-    faction_items = get_option_value(multiworld,player,"faction") # Define if we play Alliance or Horde
-    
+    # Get player options
+    level_items = get_option_value(multiworld, player, "level_items")
+    faction_items = get_option_value(multiworld, player, "faction")
+    expansion = get_option_value(multiworld, player, "goal")
 
-    for item_check in list(item_pool): # create a copy of the item_pool to iterate through
-        item_table_element = next(i_t for i_t in item_table if i_t['name'] == item_check.name)
-        item_categories = item_table_element.get("category", []) # get the categories for each item
-        if "Class" in item_categories: # check if the item is one of your clans
-            item_pool.remove(item_check) # if so, remove it from the pool
-        if level_items == LevelItems.option_sequential and "Progressive Levels" in item_categories: # Remove all progression items if we are using Sequential
-                item_pool.remove(item_check)
-        if level_items == LevelItems.option_progressive and "Sequential Levels" in item_categories: # Remove all sequential items if we are using Progressive
-                item_pool.remove(item_check)
-        if faction_items == Faction.option_alliance:
-            if "Horde" in item_categories: # Remove all Horde zones and items if we are using Alliance
-                    item_pool.remove(item_check)
-            if item_check.name == "Alliance": # Check if the item is called "Alliance" for the faction
-                    multiworld.push_precollected(item_check) # If so, send it as a Starting Item
-                    item_pool.remove(item_check) # And remove it from the pool
-        if faction_items == Faction.option_horde:
-            if "Alliance" in item_categories: # Remove all Alliance zones and items if we are using Alliance
-                    item_pool.remove(item_check)
-            if item_check.name == "Horde":
-                    multiworld.push_precollected(item_check)
-                    item_pool.remove(item_check)
-            
+    # Map numeric values to expansion names and max levels
+    expansion_map = {
+        0: ("Vanilla", 60),
+        1: ("The Burning Crusade", 70),
+        2: ("Wrath of the Lich King", 80),
+        3: ("Cataclysm", 85),
+        4: ("Mists of Pandaria", 90),
+    }
+
+    if expansion not in expansion_map:
+        raise ValueError(f"Invalid expansion value '{expansion}'.")
+
+    allowed_expansions = [name for name, _ in list(expansion_map.values())[:expansion + 1]]
+    skipped_expansions = len(expansion_map) - len(allowed_expansions)
+
+    # Initialize counters and lists
+    progressive_levels_removed = 0
+    items_to_keep = []
+    faction_item_precollected = False
+
+    for item in item_pool:
+        item_table_element = next((i for i in item_table if i["name"] == item.name), None)
+        if not item_table_element:
+            continue
+
+        item_categories = item_table_element.get("category", [])
+
+        # Handle "Class" and "Faction" items
+        if "Class" in item_categories:
+            continue
+        if faction_items == Faction.option_alliance and "Horde" in item_categories:
+            continue
+        if faction_items == Faction.option_horde and "Alliance" in item_categories:
+            continue
+        if not faction_item_precollected:  # Precollect faction-specific item
+            if (faction_items == Faction.option_alliance and item.name == "Alliance") or (
+                faction_items == Faction.option_horde and item.name == "Horde"
+            ):
+                multiworld.push_precollected(item)
+                faction_item_precollected = True
+                continue
+
+        # Combined handling for "Progressive Levels" and "Sequential Levels"
+        if "Progressive Levels" in item_categories:
+            if level_items == LevelItems.option_sequential:
+                continue
+            elif progressive_levels_removed < skipped_expansions:
+                progressive_levels_removed += 1
+                continue
+        elif "Sequential Levels" in item_categories:
+            if level_items == LevelItems.option_progressive:
+                continue
+
+        # Remove items not in allowed expansions (for expansion-affected categories)
+        if any(category in item_categories for category in ["Sequential Levels", "Zones", "Dungeons", "Talents"]):
+            if not any(expansion in item_categories for expansion in allowed_expansions):
+                continue
+
+        # Keep the item if no removal condition is met
+        items_to_keep.append(item)
+
+    # Replace the item_pool with the filtered items
+    item_pool = items_to_keep
+
+    # Add filler items if needed
     item_pool = world.add_filler_items(item_pool, [])
-    
-    return item_pool # give the modified pool back to the multiworld
+
+    return item_pool
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
 def after_create_items(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:

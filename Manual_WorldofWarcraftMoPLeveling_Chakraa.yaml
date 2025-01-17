@@ -13,6 +13,12 @@ Manual_WorldofWarcraftMoPLeveling_Chakraa:
     level_items:
       sequential: 50
       progressive: 0
+    goal:
+      vanilla: 0
+      the_burning_crusade: 0
+      wrath_of_the_lich_king: 0
+      cataclysm: 0
+      mists_of_pandaria: 50
 
 game: Manual_WorldofWarcraftMoPLeveling_Chakraa
 name: Player{number}

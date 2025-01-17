@@ -800,7 +800,43 @@
     "region": "Levels 86-90"
   },
   {
-    "name": "Victory - Level 90 Attained",
+    "name": "Vanilla",
+    "victory": true,
+    "category": [
+      "Win Condition"
+    ],
+    "requires": [],
+    "region": "Levels 51-60"
+  },
+  {
+    "name": "The_Burning_Crusade",
+    "victory": true,
+    "category": [
+      "Win Condition"
+    ],
+    "requires": [],
+    "region": "Levels 61-70"
+  },
+  {
+    "name": "Wrath_of_the_Lich_King",
+    "victory": true,
+    "category": [
+      "Win Condition"
+    ],
+    "requires": [],
+    "region": "Levels 71-80"
+  },
+  {
+    "name": "Cataclysm",
+    "victory": true,
+    "category": [
+      "Win Condition"
+    ],
+    "requires": [],
+    "region": "Levels 81-85"
+  },
+  {
+    "name": "Mists_of_Pandaria",
     "victory": true,
     "category": [
       "Win Condition"

@@ -2,7 +2,7 @@
  Files required to run the Manual Archipelago for World of Warcraft MoP Leveling
 
 ## Goal
-* Level your character all the way up to level 90
+* Level your character all the way up to maximum level depending on the expansion you have chosen (example: Mists of Pandaria = Level 90)
 ## How to play
 * Select which of the two faction you want to play in your YAML. This will give you the correct zones to level in
 * If turned on in the YAML, you will be given a random class to play
