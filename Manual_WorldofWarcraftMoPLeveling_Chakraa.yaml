@@ -1,24 +1,166 @@
-Manual_WorldofWarcraftMoPLeveling_Chakraa:
-    progression_balancing: 50
-    accessibility: items
-    randomize_starting_class: true
-    find_your_talent_slots: true
-    include_dungeons: true
-    include_equipment_rarity: true
-    hardcore_mode: true
-    faction:
-      alliance: 0
-      horde: 0
-      random: 50
-    level_items:
-      sequential: 50
-      progressive: 0
-    goal:
-      vanilla: 0
-      the_burning_crusade: 0
-      wrath_of_the_lich_king: 0
-      cataclysm: 0
-      mists_of_pandaria: 50
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Manual_WorldofWarcraftMoPLeveling_Chakraa Template
 
 game: Manual_WorldofWarcraftMoPLeveling_Chakraa
-name: Player{number}
+requires:
+  version: 0.5.1 # Version of Archipelago required for this yaml to work as expected.
+
+Manual_WorldofWarcraftMoPLeveling_Chakraa:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    # 
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    # 
+    # **Full:** ensure everything can be reached and acquired.
+    # 
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  faction:
+    # Choose your character faction. (affects which zones are available for you to quest in)
+    alliance: 0
+    horde: 0
+    random: 50
+
+  level_items:
+    # Progressive will add multiple Progressive Levels to the pool and replace the normal "Maximum Level X" items.
+    sequential: 50
+    progressive: 0
+
+  xp_rate_items:
+    # Choose how many "Progressive XP Rate" items you want added in the pool. 
+    # The value of the "XP Rate" is defined by you while you are playing, whether it be equipping an Heirloom gear piece, getting a temporary XP Buff like a potion, Darkmoon Faire buff, etc.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 10
+    0: 50
+    random: 0
+    random-low: 0
+    random-high: 0
+
+  easier_expansion_transition:
+    # Setting it to true will make it that the logic will always expect the first zone of each expansion be received before allowing progression
+    'false': 50
+    'true': 0
+
+  goal:
+    # This will affect the items/locations in the randomizer to match what max level you want to reach.
+    # vanilla = Level 60
+    # the_burning_crusade = Level 70
+    # wrath_of_the_lich_king = Level 80
+    # cataclysm = Level 85
+    # mists_of_pandaria = Level 90
+    vanilla: 0
+    the_burning_crusade: 0
+    wrath_of_the_lich_king: 0
+    cataclysm: 0
+    mists_of_pandaria: 50
+
+  randomize_starting_class:
+    # If set to 'true', you will be given a random class for you to play. You can see the received class in the Manual client.
+    'false': 0
+    'true': 50
+
+  include_talent_slots:
+    # If set to 'true', this will add "Talent Row Level X" items to the pool. This adds a bit of difficulty as you won't use Talents until you find the correct item for each row.
+    'false': 0
+    'true': 50
+
+  include_dungeons:
+    # If set to 'true', this will add all the various leveling dungeons as Filler items. This has no effect on logic; only Maximum Level and Zone Items do.
+    'false': 0
+    'true': 50
+
+  include_equipment_rarity:
+    # If set to 'true', this will add "Progressive Equipement" items to the pool. You start as only being able to wear Gray & White items and finding a "Progressive Equipement" will then unlock Greens, then Blues and then Purples.
+    'false': 0
+    'true': 50
+
+  hardcore_mode:
+    # If set to 'true', this will add 3 "Ankh of Reincarnation" items into the pool. On Hardcore, if you die, you have to restart your character, unless you have an unused "Ankh of Reincarnation".
+    'false': 0
+    'true': 50
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    # 
+    # The game decides what the replacement items will be.
+    {}

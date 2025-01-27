@@ -40,10 +40,27 @@ class LevelItems(Choice):
     option_progressive = 1
     default = 0
 
+class XPRateItems(Range):
+    """Choose how many "Progressive XP Rate" items you want added in the pool. 
+    The value of the "XP Rate" is defined by you while you are playing, whether it be equipping an Heirloom gear piece, getting a temporary XP Buff like a potion, Darkmoon Faire buff, etc."""
+    display_name = """Number of "Progressive XP Rate" items"""
+    range_start = 0
+    range_end = 10
+    default = 0
+
+class EasierExpansionTransition(Choice):
+    """Setting it to true will make it that the logic will always expect the first zone of each expansion be received before allowing progression"""
+    display_name = """Easier Expansion Transition"""
+    option_false = 0
+    option_true = 1
+    default = 0
+
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict) -> dict:
     options["faction"] = Faction
     options["level_items"] = LevelItems
+    options["xp_rate_items"] = XPRateItems
+    options["easier_expansion_transition"] = EasierExpansionTransition
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options

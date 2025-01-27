@@ -1478,5 +1478,13 @@
       "Equipment"
     ],
     "useful": true
+  },
+  {
+    "count": "10",
+    "name": "Progressive XP Rate",
+    "category": [
+      "XP Rate"
+    ],
+    "progression": true
   }
 ]

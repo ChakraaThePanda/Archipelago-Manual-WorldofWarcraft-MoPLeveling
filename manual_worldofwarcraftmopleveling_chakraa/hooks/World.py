@@ -5,7 +5,7 @@ from BaseClasses import MultiWorld, CollectionState
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import ManualItem
 from ..Locations import ManualLocation
-from .Options import LevelItems, Faction
+from .Options import LevelItems, Faction, XPRateItems
 
 # Raw JSON data from the Manual apworld, respectively:
 #          data/game.json, data/items.json, data/locations.json, data/regions.json
@@ -93,6 +93,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     level_items = get_option_value(multiworld, player, "level_items")
     faction_items = get_option_value(multiworld, player, "faction")
     expansion = get_option_value(multiworld, player, "goal")
+    xpitems = get_option_value(multiworld, player, "xp_rate_items")
 
     # Map numeric values to expansion names and max levels
     expansion_map = {
@@ -111,6 +112,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
 
     # Initialize counters and lists
     progressive_levels_removed = 0
+    xp_rate_items_kept = 0
     items_to_keep = []
     faction_item_precollected = False
 
@@ -146,6 +148,12 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
         elif "Sequential Levels" in item_categories:
             if level_items == LevelItems.option_progressive:
                 continue
+
+        # Remove unwanted "XP Rate" items
+        if "XP Rate" in item_categories:
+            if xp_rate_items_kept >= xpitems:  # Remove items beyond the allowed count
+                continue
+            xp_rate_items_kept += 1  # Increment the count of kept items
 
         # Remove items not in allowed expansions (for expansion-affected categories)
         if any(category in item_categories for category in ["Sequential Levels", "Zones", "Dungeons", "Talents"]):
