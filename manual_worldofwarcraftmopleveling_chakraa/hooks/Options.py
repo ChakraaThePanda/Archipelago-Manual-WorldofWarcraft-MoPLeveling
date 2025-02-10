@@ -43,7 +43,7 @@ class LevelItems(Choice):
 class XPRateItems(Range):
     """Choose how many "Progressive XP Rate" items you want added in the pool. 
     The value of the "XP Rate" is defined by you while you are playing, whether it be equipping an Heirloom gear piece, getting a temporary XP Buff like a potion, Darkmoon Faire buff, etc."""
-    display_name = """Number of "Progressive XP Rate" items"""
+    display_name = """Number of Progressive XP Rate"""
     range_start = 0
     range_end = 10
     default = 0
