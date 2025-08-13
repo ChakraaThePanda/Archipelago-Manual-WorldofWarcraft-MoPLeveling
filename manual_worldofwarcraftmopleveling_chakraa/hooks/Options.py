@@ -1,9 +1,8 @@
 # Object classes from AP that represent different types of options that you can create
-from Options import FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange
-
+from Options import Option, FreeText, NumericOption, Toggle, DefaultOnToggle, Choice, TextChoice, Range, NamedRange, OptionGroup, PerGameCommonOptions
 # These helper methods allow you to determine if an option has been set, or what its value is, for any player in the multiworld
 from ..Helpers import is_option_enabled, get_option_value
-
+from typing import Type, Any
 
 
 ####################################################################
@@ -56,7 +55,7 @@ class EasierExpansionTransition(Choice):
     default = 0
 
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
-def before_options_defined(options: dict) -> dict:
+def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
     options["faction"] = Faction
     options["level_items"] = LevelItems
     options["xp_rate_items"] = XPRateItems
@@ -64,17 +63,33 @@ def before_options_defined(options: dict) -> dict:
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options
-def after_options_defined(options: dict) -> dict:
-    options["goal"].__doc__ =     """This will affect the items/locations in the randomizer to match what max level you want to reach.
+def after_options_defined(options: Type[PerGameCommonOptions]):
+    # To access a modifiable version of options check the dict in options.type_hints
+    # For example if you want to change DLC_enabled's display name you would do:
+    # options.type_hints["DLC_enabled"].display_name = "New Display Name"
+
+    #  Here's an example on how to add your aliases to the generated goal
+    # options.type_hints['goal'].aliases.update({"example": 0, "second_alias": 1})
+    # options.type_hints['goal'].options.update({"example": 0, "second_alias": 1})  #for an alias to be valid it must also be in options
+
+    options.type_hints["goal"].__doc__ =     """This will affect the items/locations in the randomizer to match what max level you want to reach.
     vanilla = Level 60
     the_burning_crusade = Level 70
     wrath_of_the_lich_king = Level 80
     cataclysm = Level 85
     mists_of_pandaria = Level 90"""    
-    options["goal"].default = 4
-    options["randomize_starting_class"].__doc__ = """If set to 'true', you will be given a random class for you to play. You can see the received class in the Manual client."""
-    options["include_dungeons"].__doc__ = """If set to 'true', this will add all the various leveling dungeons as Filler items. This has no effect on logic; only Maximum Level and Zone Items do."""
-    options["include_talent_slots"].__doc__ = """If set to 'true', this will add "Talent Row Level X" items to the pool. This adds a bit of difficulty as you won't use Talents until you find the correct item for each row."""
-    options["include_equipment_rarity"].__doc__ = """If set to 'true', this will add "Progressive Equipement" items to the pool. You start as only being able to wear Gray & White items and finding a "Progressive Equipement" will then unlock Greens, then Blues and then Purples."""
-    options["hardcore_mode"].__doc__ = """If set to 'true', this will add 3 "Ankh of Reincarnation" items into the pool. On Hardcore, if you die, you have to restart your character, unless you have an unused "Ankh of Reincarnation"."""
+    options.type_hints["goal"].default = 4
+    options.type_hints["randomize_starting_class"].__doc__ = """If set to 'true', you will be given a random class for you to play. You can see the received class in the Manual client."""
+    options.type_hints["include_dungeons"].__doc__ = """If set to 'true', this will add all the various leveling dungeons as Filler items. This has no effect on logic; only Maximum Level and Zone Items do."""
+    options.type_hints["include_talent_slots"].__doc__ = """If set to 'true', this will add "Talent Row Level X" items to the pool. This adds a bit of difficulty as you won't use Talents until you find the correct item for each row."""
+    options.type_hints["include_equipment_rarity"].__doc__ = """If set to 'true', this will add "Progressive Equipement" items to the pool. You start as only being able to wear Gray & White items and finding a "Progressive Equipement" will then unlock Greens, then Blues and then Purples."""
+    options.type_hints["hardcore_mode"].__doc__ = """If set to 'true', this will add 3 "Ankh of Reincarnation" items into the pool. On Hardcore, if you die, you have to restart your character, unless you have an unused "Ankh of Reincarnation"."""
     return options
+
+# Use this Hook if you want to add your Option to an Option group (existing or not)
+def before_option_groups_created(groups: dict[str, list[Type[Option[Any]]]]) -> dict[str, list[Type[Option[Any]]]]:
+    # Uses the format groups['GroupName'] = [TotalCharactersToWinWith]
+    return groups
+
+def after_option_groups_created(groups: list[OptionGroup]) -> list[OptionGroup]:
+    return groups
