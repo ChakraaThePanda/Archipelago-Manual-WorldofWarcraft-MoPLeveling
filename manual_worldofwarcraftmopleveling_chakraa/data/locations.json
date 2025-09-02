@@ -1,91 +1,83 @@
 [
   {
-    "name": "Level 1",
+    "name": "Level 01",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 2",
+    "name": "Level 02",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 3",
+    "name": "Level 03",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 4",
+    "name": "Level 04",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 5",
+    "name": "Level 05",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 6",
+    "name": "Level 06",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 7",
+    "name": "Level 07",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 8",
+    "name": "Level 08",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
-    "name": "Level 9",
+    "name": "Level 09",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
     "name": "Level 10",
     "category": [
-      "Levels 1-10"
+      "Levels 01-10"
     ],
     "requires": [],
-    "region": "Levels 1-10"
-  },
-  {
-    "name": "Level 10 (2)",
-    "category": [
-      "Levels 1-10"
-    ],
-    "requires": [],
-    "region": "Levels 1-10"
+    "region": "Levels 01-10"
   },
   {
     "name": "Level 11",
@@ -161,14 +153,6 @@
   },
   {
     "name": "Level 20",
-    "category": [
-      "Levels 11-20"
-    ],
-    "requires": [],
-    "region": "Levels 11-20"
-  },
-  {
-    "name": "Level 20 (2)",
     "category": [
       "Levels 11-20"
     ],
@@ -256,14 +240,6 @@
     "region": "Levels 21-30"
   },
   {
-    "name": "Level 30 (2)",
-    "category": [
-      "Levels 21-30"
-    ],
-    "requires": [],
-    "region": "Levels 21-30"
-  },
-  {
     "name": "Level 31",
     "category": [
       "Levels 31-40"
@@ -337,14 +313,6 @@
   },
   {
     "name": "Level 40",
-    "category": [
-      "Levels 31-40"
-    ],
-    "requires": [],
-    "region": "Levels 31-40"
-  },
-  {
-    "name": "Level 40 (2)",
     "category": [
       "Levels 31-40"
     ],
@@ -432,14 +400,6 @@
     "region": "Levels 41-50"
   },
   {
-    "name": "Level 50 (2)",
-    "category": [
-      "Levels 41-50"
-    ],
-    "requires": [],
-    "region": "Levels 41-50"
-  },
-  {
     "name": "Level 51",
     "category": [
       "Levels 51-60"
@@ -513,14 +473,6 @@
   },
   {
     "name": "Level 60",
-    "category": [
-      "Levels 51-60"
-    ],
-    "requires": [],
-    "region": "Levels 51-60"
-  },
-  {
-    "name": "Level 60 (2)",
     "category": [
       "Levels 51-60"
     ],
@@ -608,14 +560,6 @@
     "region": "Levels 61-70"
   },
   {
-    "name": "Level 70 (2)",
-    "category": [
-      "Levels 61-70"
-    ],
-    "requires": [],
-    "region": "Levels 61-70"
-  },
-  {
     "name": "Level 71",
     "category": [
       "Levels 71-80"
@@ -696,14 +640,6 @@
     "region": "Levels 71-80"
   },
   {
-    "name": "Level 80 (2)",
-    "category": [
-      "Levels 71-80"
-    ],
-    "requires": [],
-    "region": "Levels 71-80"
-  },
-  {
     "name": "Level 81",
     "category": [
       "Levels 81-85"
@@ -744,14 +680,6 @@
     "region": "Levels 81-85"
   },
   {
-    "name": "Level 85 (2)",
-    "region": "Levels 81-85",
-    "category": [
-      "Levels 81-85"
-    ],
-    "requires": []
-  },
-  {
     "name": "Level 86",
     "category": [
       "Levels 86-90"
@@ -785,14 +713,6 @@
   },
   {
     "name": "Level 90",
-    "category": [
-      "Levels 86-90"
-    ],
-    "requires": [],
-    "region": "Levels 86-90"
-  },
-  {
-    "name": "Level 90 (2)",
     "category": [
       "Levels 86-90"
     ],
